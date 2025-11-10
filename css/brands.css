@@ -631,3 +631,11 @@
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
 }
+
+
+/* Buy Me A Coffee With DANA */
+.button-buy-me-a-coffee-with-dana {
+    --button-text: #ffffff;
+    --button-background: #000000;
+    --button-border: 2px solid #FFFFFF;
+}
