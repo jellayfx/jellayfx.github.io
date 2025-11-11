@@ -637,5 +637,6 @@
 .button-buy-me-a-coffee-with-dana {
     --button-text: #ffffff;
     --button-background: #000000;
-    --button-border: 4px solid #FFFFFF;
+    --button-border: 1px solid #FFFFFF;
+	  font-size: 16px; /* Menambahkan ukuran font */
 }
