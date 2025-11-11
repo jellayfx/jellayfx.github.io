@@ -641,6 +641,15 @@
 	  font-size: 16px; /* Menambahkan ukuran font */
 }
 
+/* Buy Me A Coffee With DANA */
+.button-gopay-coffee {
+    --button-text: #ffffff;
+    --button-background: #000000;
+    --button-border: 1px solid #FFFFFF;
+	  font-size: 16px; /* Menambahkan ukuran font */
+}
+
+
 
 /* Anda perlu menambahkan CSS dasar tombol ini jika belum ada */
 .button-gopay-coffee {
