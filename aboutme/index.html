@@ -214,7 +214,17 @@
     </div>
   </div>
   
-
+<!-- Script for blogspot menghilangkan m=1 -->
+<script type='text/javascript'> 
+//<![CDATA[ 
+var uri = window.location.toString(); 
+if (uri.indexOf("?m=1", 0) > 0) { 
+var newuri = uri.replace("?m=1", ""); 
+window.history.replaceState('', '', newuri); 
+} 
+//]]> 
+</script>
+        
 </body>
     <script>
         var plausibleScript = document.createElement("script");
