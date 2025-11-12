@@ -38,12 +38,11 @@ document.getElementById('tampilkan-gopay-coffee').addEventListener('click', func
 
 
 // File: interaksi.js
-
 document.getElementById('tampilkan-instagram-btn').addEventListener('click', function(e) {
     e.preventDefault(); 
     
     var galeriWadah = document.getElementById('galeri-instagram-tersembunyi');
-    var buttonText = document.getElementById('button-text-toggle'); // Menargetkan span teks tombol
+    var buttonText = document.getElementById('button-text-toggle'); // TARGET SPAN TEKS
     
     if (galeriWadah.classList.contains('tersembunyi')) {
         // Jika tersembunyi, TAMPILKAN
