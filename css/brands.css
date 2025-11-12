@@ -651,7 +651,7 @@
 
 
 /* ======================================================= */
-/* 1. ATURAN FUNGSI GALERI & TOMBOL KHUSUS GALERI */
+/* ATURAN GALERI & TOMBOL KHUSUS GALERI */
 /* ======================================================= */
 
 /* A. ATURAN PENYEMBUNYIAN (Wajib ada) */
@@ -661,16 +661,16 @@
 
 /* B. Style untuk Tombol Galeri (.button-gallery-toggle) */
 .button-gallery-toggle {
-    /* Menggunakan Gradien Merah untuk konsistensi warna tombol utama Anda */
+    /* Menggunakan Gradien Merah untuk konsistensi warna tombol */
     background-image: linear-gradient(to right, #FF3838, #C40000); 
     
     color: #ffffff; 
     text-decoration: none;
     font-weight: bold;
     
-    /* Pewarisan Properti Dasar untuk Lebar dan Bentuk Seragam */
+    /* Properti Dasar untuk Lebar dan Bentuk Seragam */
     width: 90%; 
-    max-width: 350px; /* Lebar harus SAMA dengan tombol lain */
+    max-width: 350px; /* HARUS SAMA dengan max-width tombol lain */
     margin: 8px auto; 
     padding: 12px 20px;
     border-radius: 8px; 
@@ -678,29 +678,29 @@
     /* Flexbox untuk Kerapian Ikon/Teks */
     display: flex; 
     align-items: center; 
-    justify-content: center; /* Membuat ikon dan teks rata tengah di dalam tombol */
+    justify-content: center; /* Rata tengah ikon dan teks */
 }
 
-/* C. Margin Ikon Galeri (Diperlukan agar ikon dan teks tidak menempel) */
+/* C. Margin Ikon Galeri (Agar ikon tidak menempel pada teks) */
 .button-gallery-toggle .icon {
     margin-right: 8px;
 }
 
 /* D. Style untuk Wadah Galeri (#galeri-instagram-tersembunyi) */
 #galeri-instagram-tersembunyi {
-    /* Samakan lebar dengan tombol agar sejajar */
+    /* Memastikan wadah selebar tombol */
     width: 90%; 
     max-width: 350px; 
     margin: 20px auto; 
     text-align: center; 
     border-radius: 8px; 
-    overflow: hidden; /* Mencegah gambar 'tumpah' */
+    overflow: hidden; /* Mencegah gambar tumpah */
 }
 
-/* E. Style untuk Gambar Galeri (.gambar-galeri-embed) */
-.gambar-galeri-embed {
-    width: 100%; 
-    max-width: 100%; /* WAJIB: Memastikan gambar tidak melebihi lebar wadah 350px */
-    height: auto;
-    display: block;
+/* E. Style untuk Gambar Galeri (Wajib agar tidak terlalu besar) */
+#galeri-instagram-tersembunyi .gambar-galeri-embed {
+    width: 100% !important;        /* Memastikan lebar penuh wadah */
+    max-width: 100% !important;    /* Memastikan gambar tidak melebihi lebar wadah */
+    height: auto !important;       /* Mempertahankan rasio gambar */
+    display: block !important;
 }
