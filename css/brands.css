@@ -672,3 +672,25 @@
 .tersembunyi {
     display: none;
 }
+
+
+/* 1. Tambahkan CSS untuk tombol Tampil/Sembunyi (Merah) */
+.button-gallery-toggle {
+    --button-text: #ffffff;
+    background-color: #E72545; /* Ganti dengan kode warna merah yang Anda pakai */
+    /* Pastikan properti dasar button juga diterapkan */
+    /* ... display, padding, border-radius, font-weight, color ... */
+}
+
+/* 2. Pastikan Kerapian Galeri (PENTING untuk membuat selebar tombol) */
+#galeri-instagram-tersembunyi {
+    /* Set max-width yang sama dengan tombol Anda (misal 350px) */
+    width: 90%; 
+    max-width: 350px; 
+    margin: 20px auto; /* Membuat rata tengah */
+    text-align: center; 
+}
+/* Pastikan iframe mengisi seluruh lebar wadahnya */
+#galeri-instagram-tersembunyi iframe {
+    width: 100%;
+}
