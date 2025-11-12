@@ -689,3 +689,8 @@
     height: auto;
     display: block;
 }
+
+/* ATURAN INI WAJIB ADA DAN HARUS DIEKSEKUSI */
+.tersembunyi {
+    display: none;
+}
