@@ -690,7 +690,7 @@
     display: block;
 }
 
-/* ATURAN INI WAJIB ADA DAN HARUS DIEKSEKUSI */
+/* COBA SOLUSI INI JIKA HILANGNYA GAGAL */
 .tersembunyi {
-    display: none;
+    display: none !important; /* Memaksa elemen ini disembunyikan */
 }
