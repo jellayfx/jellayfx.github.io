@@ -651,46 +651,54 @@
 
 
 
-/* 1. CSS untuk tombol Galeri (Warna Merah) */
+/* 1. ATURAN PENYEMBUNYIAN (WAJIB ADA UNTUK MENYEMBUNYIKAN AWAL) */
+.tersembunyi {
+    display: none; 
+}
+
+/* 2. Style untuk Tombol Galeri (Warna Merah & Logo tidak hilang) */
+/* CLASS INI MEMISAHKAN TOMBOL MERAH DARI TOMBOL UNGU/GRADIENT INSTAGRAM LAINNYA */
 .button-gallery-toggle {
-    background-color: #E72545; /* Pastikan ini warna merah yang Anda lihat */
-    color: white;
+    /* Gaya Warna Tombol Merah */
+    background-color: #E72545; /* Ganti dengan kode warna merah yang Anda inginkan */
+    --button-text: #ffffff;
+    color: var(--button-text);
     text-decoration: none;
     font-weight: bold;
     
+    /* Gaya Dasar Tombol (Anggap ini diwariskan dari .button) */
+    width: 90%; 
+    max-width: 350px; /* Lebar Maksimum */
+    margin: 8px auto; /* Membuat rata tengah */
+    padding: 12px 20px;
+    border-radius: 8px;
+
     /* PENTING UNTUK LOGO AGAR TIDAK HILANG */
     display: flex; 
     align-items: center; 
-    justify-content: center; /* Untuk centering horizontal */
-    
-    /* Pewarisan properti button dasar */
-    width: 90%; 
-    max-width: 350px; 
-    margin: 8px auto; 
-    padding: 12px 20px;
-    border-radius: 8px;
+    justify-content: center;
 }
 
-/* Pastikan logo di dalamnya memiliki margin yang cukup */
+/* 3. Margin untuk Ikon di dalam Tombol Galeri */
 .button-gallery-toggle .icon {
+    /* Memberi jarak antara logo dan teks */
     margin-right: 8px;
 }
 
-/* 2. Styling untuk Gambar Galeri (Memperbaiki Kerapian) */
+/* 4. Style untuk Wadah Galeri (Memperbaiki Kerapian Lebar) */
 #galeri-instagram-tersembunyi {
-    /* Samakan lebar dengan tombol */
+    /* Samakan max-width dengan tombol agar sejajar */
     width: 90%; 
-    max-width: 350px; 
+    max-width: 350px; /* HARUS SAMA DENGAN MAX-WIDTH TOMBOL */
     margin: 20px auto; /* Membuat rata tengah */
-}
-/* Pastikan gambar mengisi penuh wadah */
-.gambar-galeri-embed { /* Jika Anda menggunakan class ini */
-    width: 100%; 
-    height: auto;
-    display: block;
+    text-align: center; 
+    padding: 10px;
 }
 
-/* COBA SOLUSI INI JIKA HILANGNYA GAGAL */
-.tersembunyi {
-    display: none !important; /* Memaksa elemen ini disembunyikan */
+/* 5. Style untuk Gambar di dalamnya (Opsi 2) */
+.gambar-galeri-embed {
+    width: 100%; /* Mengisi lebar penuh wadah */
+    height: auto;
+    max-height: 400px;
+    display: block;
 }
