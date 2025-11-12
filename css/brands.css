@@ -641,7 +641,7 @@
 	  font-size: 16px; /* Menambahkan ukuran font */
 }
 
-/* Buy Me A Coffee With DANA */
+/* Buy Me A Coffee With Gopay */
 .button-gopay-coffee {
     --button-text: #ffffff;
     --button-background: #000000;
@@ -659,8 +659,8 @@
 /* 2. Style untuk Tombol Galeri (Warna Merah & Kerapian) */
 .button-gallery-toggle {
     /* Gaya Warna Tombol Merah */
-    background-color: #E72545; 
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
     
