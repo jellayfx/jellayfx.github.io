@@ -651,46 +651,34 @@
 
 
 
-/* 1. Class untuk menyembunyikan konten awal (Wajib Ada) */
-.tersembunyi {
-    display: none !important; /* Gunakan !important jika ada konflik display */
-}
+/* Anda sudah punya: CSS untuk .button-instagram (Gradien Ungu/Merah) */
+/* .button-instagram { background-image:linear-gradient... } */
 
-/* 2. Style untuk Tombol Galeri (Warna Merah) */
+/* 1. Tambahkan CSS untuk tombol Galeri (Warna Merah) */
 .button-gallery-toggle {
-    --button-text: #ffffff;
-    background-color: #E72545; /* Ganti dengan warna merah yang Anda inginkan */
-    
-    /* Pastikan properti dasar button juga diterapkan */
-    display: flex; /* Tambahkan ini agar logo dan teks sejajar */
-    align-items: center; 
-    justify-content: center; /* Untuk memusatkan teks dan logo */
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    color: var(--button-text);
-    text-decoration: none;
-    
-    /* CSS Kerapian/Centering (Sangat Penting) */
-    width: 90%; 
-    max-width: 350px; /* Nilai ini HARUS SAMA DENGAN max-width wadah galeri di bawah */
-    margin: 8px auto; 
+    background-color: #E72545; /* Contoh warna merah dari screenshot Anda */
+    /* Tambahkan properti dasar yang lain jika diperlukan */
+    color: white;
+    /* ... pastikan properti layout (display: flex, align-items: center) juga ada ... */
 }
 
-/* 3. Style untuk Wadah Galeri (Memperbaiki Kerapian Lebar) */
+/* 2. Style untuk Wadah Galeri (Memperbaiki Kerapian Lebar) */
 #galeri-instagram-tersembunyi {
-    /* Samakan max-width dengan tombol agar sejajar */
+    /* Atur lebar maksimum agar sama dengan tombol utama Anda */
     width: 90%; 
-    max-width: 350px; /* HARUS SAMA DENGAN MAX-WIDTH TOMBOL */
+    max-width: 350px; /* Nilai ini HARUS sama dengan max-width tombol */
     margin: 20px auto; /* Membuat rata tengah */
-    text-align: center; 
-    padding: 10px; /* Sedikit padding agar gambar tidak terlalu mepet */
+    text-align: center;
 }
 
-/* 4. Style untuk Gambar di dalam Galeri */
+/* 3. Pastikan gambar di dalamnya mengisi lebar penuh wadah */
 .gambar-galeri-embed {
-    width: 100%; /* Mengisi lebar penuh wadah */
+    width: 100%; 
     height: auto;
-    max-height: 400px;
     display: block;
+}
+
+/* WAJIB: Aturan penyembunyian awal */
+.tersembunyi {
+    display: none;
 }
