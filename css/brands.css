@@ -661,19 +661,17 @@
 
 /* B. Style untuk Tombol Galeri (.button-gallery-toggle) */
 .button-gallery-toggle {
-    /* Hanya mendefinisikan warna dan teks. SEMUA properti lebar/padding DIHAPUS 
-       agar tombol ini mengambil lebar dari tombol lain yang sudah "sempurna". */
-    background-image: linear-gradient(to right, #FF3838, #C40000); /* Gradien Merah */
-    
+    background-image: linear-gradient(to right, #FF3838, #C40000); 
     color: #ffffff; 
+    text-decoration: none;
+    font-weight: bold;
     
-    /* PENTING: Jika tombol lain Anda rata tengah, Anda perlu mempertahankan ini. 
-       Jika tidak, hapus 4 baris ini agar mengikuti .button yang sudah sempurna. */
+    /* PENTING: Untuk mengatasi masalah perataan setelah ikon dihapus */
     display: flex; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: center; /* MEMAKSA TEKS RATA TENGAH HORIZONTAL */
     
-    /* Hapus semua width, max-width, padding, dan margin dari sini */
+    /* Hapus semua margin/padding yang tidak diperlukan agar mewarisi dari .button */
 }
 
 /* C. Margin Ikon Galeri (Hanya diperlukan jika Anda menggunakan ikon) */
