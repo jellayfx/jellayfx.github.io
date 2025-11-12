@@ -658,9 +658,9 @@
 
 /* 2. Style untuk Tombol Galeri (Warna Merah & Kerapian) */
 .button-gallery-toggle {
-    /* Gaya Warna Tombol Merah */
-    background-color: #ffffff;
-    color: #000000;
+    /* PERBAIKAN: Ganti warna latar belakang dan teks agar MERAH SOLID */
+    background-color: #E72545; 
+    color: #ffffff; /* Teks harus putih agar terbaca */
     text-decoration: none;
     font-weight: bold;
     
@@ -669,20 +669,14 @@
     max-width: 350px; 
     margin: 8px auto; 
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 8px; /* Sudut tombol harus sama */
 
     /* PENTING untuk Kerapian Ikon/Teks */
     display: flex; 
     align-items: center; 
     
-    /* PILIH SALAH SATU UNTUK KERAPIAN HORIZONTAL: */
-    /* A. Jika tombol lain rata tengah: */
+    /* PENGATURAN HORIZONTAL: Kita pilih rata tengah (center) karena semua tombol Anda rata tengah */
     justify-content: center;
-    /* B. Jika tombol lain rata kiri: */
-    /* justify-content: flex-start; */ 
-    
-    /* Jika Anda memilih B (Rata Kiri), tambahkan: */
-    /* padding-left: 15%; */
 }
 
 /* 3. Margin Ikon (Wajib agar ikon dan teks tidak menempel) */
@@ -693,9 +687,13 @@
 /* 4. Style untuk Wadah Galeri (Agar Rapi dan Rata Tengah) */
 #galeri-instagram-tersembunyi {
     width: 90%; 
-    max-width: 350px; /* HARUS SAMA DENGAN MAX-WIDTH TOMBOL */
+    max-width: 350px; 
     margin: 20px auto; 
-    text-align: center; 
+    text-align: center;
+    
+    /* PENYESUAIAN TAMBAHAN UNTUK KERAPIAN */
+    border-radius: 8px; /* Agar sudut wadah galeri sama dengan tombol */
+    /* Anda bisa tambahkan background-color: white; jika ingin ada latar belakang untuk gambar */
 }
 
 /* 5. Style untuk Gambar (Agar muncul dan selebar wadah) */
