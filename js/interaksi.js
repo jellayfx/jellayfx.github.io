@@ -1,17 +1,18 @@
-// File: interaksi.js
-
 document.getElementById('tampilkan-instagram-btn').addEventListener('click', function(e) {
+    // Mencegah browser mengikuti tautan '#'
     e.preventDefault(); 
     
+    // Mendapatkan elemen wadah galeri dan elemen teks tombol
     var galeriWadah = document.getElementById('galeri-instagram-tersembunyi');
-    var buttonText = document.getElementById('button-text-toggle'); // Menargetkan span teks tombol
+    var buttonText = document.getElementById('button-text-toggle');
     
+    // Memeriksa dan mengubah status 'tersembunyi'
     if (galeriWadah.classList.contains('tersembunyi')) {
-        // TAMPILKAN
+        // Jika tersembunyi, TAMPILKAN
         galeriWadah.classList.remove('tersembunyi');
-        buttonText.textContent = 'Sembunyikan Galeri Instagram'; // Mengubah hanya teks
+        buttonText.textContent = 'Sembunyikan Galeri Instagram'; // Mengubah teks
     } else {
-        // SEMBUNYIKAN
+        // Jika terlihat, SEMBUNYIKAN
         galeriWadah.classList.add('tersembunyi');
         buttonText.textContent = 'Lihat Galeri Instagram'; // Mengubah teks kembali
     }
