@@ -658,27 +658,32 @@
 /* 2. Style untuk Tombol Galeri (Warna Merah & Kerapian) */
 .button-gallery-toggle {
     /* Gaya Warna Tombol Merah */
-    background-color: #E72545; /* Warna merah solid */
+    background-color: #E72545; 
     color: #ffffff; 
     text-decoration: none;
     font-weight: bold;
     
-    /* Gaya Dasar (Asumsi properti ini sama dengan tombol .button lainnya) */
+    /* GAYA UTAMA UNTUK LEBAR SERAGAM */
     width: 90%; 
-    max-width: 350px; 
-    margin: 8px auto; 
-    padding: 12px 20px;
+    max-width: 350px; /* Nilai maksimum harus SAMA DENGAN TOMBOL LAIN */
+    margin: 8px auto; /* Centering */
+    padding: 12px 20px; /* Padding internal */
     border-radius: 8px; 
 
-    /* PENTING untuk Kerapian Ikon/Teks */
+    /* Kerapian Ikon/Teks */
     display: flex; 
     align-items: center; 
-    justify-content: center; /* Membuat ikon dan teks rata tengah di dalam tombol */
+    justify-content: center; /* Rata tengah ikon dan teks */
+    
+    /* Jika masih terlihat terlalu lebar, coba atur tinggi yang sama */
+    /* height: 45px; */ 
 }
 
 /* 3. Margin Ikon (Wajib agar ikon dan teks tidak menempel) */
 .button-gallery-toggle .icon {
     margin-right: 8px;
+    /* Tambahkan pengaturan ukuran eksplisit jika ikon Anda terlalu besar */
+    /* width: 20px; height: 20px; */ 
 }
 
 /* 4. Style untuk Wadah Galeri (Agar Rapi dan Rata Tengah) */
