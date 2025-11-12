@@ -648,12 +648,6 @@
     --button-border: 1px solid #FFFFFF;
 	  font-size: 16px; /* Menambahkan ukuran font */
 }
-.button-gallery-toggle {
-    --button-text: #ffffff;
-    --button-background: #000000;
-    --button-border: 1px solid #FFFFFF;
-	  font-size: 16px; /* Menambahkan ukuran font */
-}
 
 
 
