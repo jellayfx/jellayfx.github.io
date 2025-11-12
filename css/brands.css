@@ -655,35 +655,39 @@
     display: none; 
 }
 
-/* 2. Style untuk Tombol Galeri (Warna Merah & Kerapian) */
+/* 2. Style untuk Tombol Galeri (Warna Merah Konsisten) */
 .button-gallery-toggle {
-    /* Gaya Warna Tombol Merah */
-    background-color: #E72545; 
-    color: #ffffff; 
+    /* MENGGUNAKAN LINEAR-GRADIENT UNTUK KONSISTENSI DENGAN TOMBOL LAIN */
+    background-image: linear-gradient(to right, #FF3838, #C40000); /* Gradien merah */
+    
+    --button-text: #ffffff;
+    color: var(--button-text); 
     text-decoration: none;
     font-weight: bold;
     
-    /* GAYA UTAMA UNTUK LEBAR SERAGAM */
+    /* PROPERTI KERAPIAN DAN LEBAR SERAGAM */
     width: 90%; 
-    max-width: 350px; /* Nilai maksimum harus SAMA DENGAN TOMBOL LAIN */
-    margin: 8px auto; /* Centering */
-    padding: 12px 20px; /* Padding internal */
+    max-width: 350px; /* HARUS SAMA DENGAN TOMBOL LAIN */
+    margin: 8px auto; 
+    padding: 12px 20px;
     border-radius: 8px; 
 
-    /* Kerapian Ikon/Teks */
+    /* Pengaturan Flexbox untuk Kerapian Ikon/Teks */
     display: flex; 
     align-items: center; 
     justify-content: center; /* Rata tengah ikon dan teks */
-    
-    /* Jika masih terlihat terlalu lebar, coba atur tinggi yang sama */
-    /* height: 45px; */ 
 }
 
 /* 3. Margin Ikon (Wajib agar ikon dan teks tidak menempel) */
 .button-gallery-toggle .icon {
     margin-right: 8px;
-    /* Tambahkan pengaturan ukuran eksplisit jika ikon Anda terlalu besar */
-    /* width: 20px; height: 20px; */ 
+}
+
+/* CATATAN: Pastikan Anda juga memiliki CSS di bawah ini (yang Anda berikan) */
+.button-instagram {
+	--button-text:#ffffff;
+	background-image:linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
+}
 }
 
 /* 4. Style untuk Wadah Galeri (Agar Rapi dan Rata Tengah) */
