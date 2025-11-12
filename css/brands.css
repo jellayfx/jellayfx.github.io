@@ -651,54 +651,56 @@
 
 
 
-/* 1. ATURAN PENYEMBUNYIAN (WAJIB ADA UNTUK MENYEMBUNYIKAN AWAL) */
+/* 1. ATURAN PENYEMBUNYIAN (WAJIB) */
 .tersembunyi {
     display: none; 
 }
 
-/* 2. Style untuk Tombol Galeri (Warna Merah & Logo tidak hilang) */
-/* CLASS INI MEMISAHKAN TOMBOL MERAH DARI TOMBOL UNGU/GRADIENT INSTAGRAM LAINNYA */
+/* 2. Style untuk Tombol Galeri (Warna Merah & Kerapian) */
 .button-gallery-toggle {
     /* Gaya Warna Tombol Merah */
-    background-color: #E72545; /* Ganti dengan kode warna merah yang Anda inginkan */
-    --button-text: #ffffff;
-    color: var(--button-text);
+    background-color: #E72545; 
+    color: white;
     text-decoration: none;
     font-weight: bold;
     
-    /* Gaya Dasar Tombol (Anggap ini diwariskan dari .button) */
+    /* Gaya Dasar (Pastikan nilai ini konsisten dengan tombol lain) */
     width: 90%; 
-    max-width: 350px; /* Lebar Maksimum */
-    margin: 8px auto; /* Membuat rata tengah */
+    max-width: 350px; 
+    margin: 8px auto; 
     padding: 12px 20px;
     border-radius: 8px;
 
-    /* PENTING UNTUK LOGO AGAR TIDAK HILANG */
+    /* PENTING untuk Kerapian Ikon/Teks */
     display: flex; 
     align-items: center; 
+    
+    /* PILIH SALAH SATU UNTUK KERAPIAN HORIZONTAL: */
+    /* A. Jika tombol lain rata tengah: */
     justify-content: center;
+    /* B. Jika tombol lain rata kiri: */
+    /* justify-content: flex-start; */ 
+    
+    /* Jika Anda memilih B (Rata Kiri), tambahkan: */
+    /* padding-left: 15%; */
 }
 
-/* 3. Margin untuk Ikon di dalam Tombol Galeri */
+/* 3. Margin Ikon (Wajib agar ikon dan teks tidak menempel) */
 .button-gallery-toggle .icon {
-    /* Memberi jarak antara logo dan teks */
     margin-right: 8px;
 }
 
-/* 4. Style untuk Wadah Galeri (Memperbaiki Kerapian Lebar) */
+/* 4. Style untuk Wadah Galeri (Agar Rapi dan Rata Tengah) */
 #galeri-instagram-tersembunyi {
-    /* Samakan max-width dengan tombol agar sejajar */
     width: 90%; 
     max-width: 350px; /* HARUS SAMA DENGAN MAX-WIDTH TOMBOL */
-    margin: 20px auto; /* Membuat rata tengah */
+    margin: 20px auto; 
     text-align: center; 
-    padding: 10px;
 }
 
-/* 5. Style untuk Gambar di dalamnya (Opsi 2) */
+/* 5. Style untuk Gambar (Agar muncul dan selebar wadah) */
 .gambar-galeri-embed {
-    width: 100%; /* Mengisi lebar penuh wadah */
+    width: 100%; 
     height: auto;
-    max-height: 400px;
     display: block;
 }
