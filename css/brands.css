@@ -654,36 +654,42 @@
 /* ATURAN FUNGSI GALERI & TOMBOL KHUSUS GALERI */
 /* ======================================================= */
 
-/* A. ATURAN PENYEMBUNYIAN */
+/* A. ATURAN PENYEMBUNYIAN (Wajib ada) */
 .tersembunyi {
     display: none; 
 }
 
 /* B. Style untuk Tombol Galeri (.button-gallery-toggle) */
 .button-gallery-toggle {
-    background-image: linear-gradient(to right, #FF3838, #C40000); 
-    color: #ffffff; 
-    text-decoration: none;
-    font-weight: bold;
-    
-    /* PENTING: Untuk mengatasi masalah perataan setelah ikon dihapus */
+    /* PENTING: Menambahkan kembali properti layout yang hilang agar sejajar */
+    width: 90%; 
+    max-width: 350px; 
+    margin: 8px auto; /* INI KUNCI UTAMA UNTUK CENTERING HORIZONTAL */
+    padding: 12px 20px; 
+    border-radius: 8px; 
+
+    /* Flexbox untuk Centering Teks di dalam Tombol */
     display: flex; 
     align-items: center; 
-    justify-content: center; /* MEMAKSA TEKS RATA TENGAH HORIZONTAL */
-    
-    /* Hapus semua margin/padding yang tidak diperlukan agar mewarisi dari .button */
+    justify-content: center;
+
+    /* Warna Tombol */
+    background-image: linear-gradient(to right, #FF3838, #C40000); 
+    color: #ffffff; 
+    font-weight: bold;
+    text-decoration: none; 
 }
 
-/* C. Margin Ikon Galeri (Hanya diperlukan jika Anda menggunakan ikon) */
+/* C. Margin Ikon Galeri (Hanya berlaku jika Anda menggunakan ikon) */
 .button-gallery-toggle .icon {
     margin-right: 8px;
 }
 
 /* D. Style untuk Wadah Galeri (#galeri-instagram-tersembunyi) */
 #galeri-instagram-tersembunyi {
-    /* Gunakan properti yang ada di tombol lain untuk lebar seragam */
+    /* Memastikan wadah selebar tombol */
     width: 90%; 
-    max-width: 350px; /* Asumsi max-width tombol lain 350px */
+    max-width: 350px; 
     margin: 20px auto; 
     text-align: center; 
     border-radius: 8px; 
@@ -693,7 +699,7 @@
 /* E. Style untuk Gambar Galeri (Wajib agar tidak terlalu besar) */
 #galeri-instagram-tersembunyi .gambar-galeri-embed {
     width: 100% !important;        /* Memaksa lebar penuh wadah */
-    max-width: 100% !important;    /* Memastikan gambar tidak melebihi lebar wadah */
+    max-width: 100% !important;    /* Memaksa batasan lebar */
     height: auto !important;       /* Mempertahankan rasio gambar */
     display: block !important;
 }
