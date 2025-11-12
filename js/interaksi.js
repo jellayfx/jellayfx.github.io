@@ -1,12 +1,14 @@
+// File: interaksi.js
+
 document.getElementById('tampilkan-instagram-btn').addEventListener('click', function(e) {
-    // 1. Mencegah browser mengikuti tautan '#' secara default
+    // Mencegah browser mengikuti tautan '#' 
     e.preventDefault(); 
     
-    // 2. Mendapatkan elemen wadah galeri dan elemen teks tombol
+    // Mendapatkan elemen wadah galeri dan elemen teks tombol
     var galeriWadah = document.getElementById('galeri-instagram-tersembunyi');
     var buttonText = document.getElementById('button-text-toggle');
     
-    // 3. Memeriksa dan mengubah status 'tersembunyi'
+    // Toggle class 'tersembunyi'
     if (galeriWadah.classList.contains('tersembunyi')) {
         // TAMPILKAN: Hapus class 'tersembunyi'
         galeriWadah.classList.remove('tersembunyi');
