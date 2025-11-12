@@ -694,3 +694,31 @@
 #galeri-instagram-tersembunyi iframe {
     width: 100%;
 }
+
+
+/* Asumsi: Ini adalah CSS untuk semua tombol agar rata tengah */
+.button {
+    width: 90%; 
+    max-width: 350px; /* Lebar maksimum yang konsisten (Ganti 350px dengan lebar tombol Anda yang sebenarnya) */
+    margin: 8px auto; /* Penting untuk centering horizontal */
+}
+
+/* WAJIB: Aturan CSS untuk galeri tersembunyi */
+#galeri-instagram-tersembunyi {
+    /* Samakan lebar dengan tombol agar sejajar */
+    width: 90%; 
+    max-width: 350px; /* HARUS SAMA DENGAN MAX-WIDTH TOMBOL */
+    margin: 20px auto; /* Membuat rata tengah */
+    text-align: center;
+}
+
+/* Pastikan konten di dalamnya (gambar atau iframe) mengisi penuh wadah */
+#galeri-instagram-tersembunyi img { /* Jika Anda menggunakan tag <img> */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* ATAU */
+#galeri-instagram-tersembunyi iframe { /* Jika Anda menggunakan tag <iframe> */
+    width: 100%;
+}
