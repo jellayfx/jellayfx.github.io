@@ -651,34 +651,41 @@
 
 
 
-/* Anda sudah punya: CSS untuk .button-instagram (Gradien Ungu/Merah) */
-/* .button-instagram { background-image:linear-gradient... } */
-
-/* 1. Tambahkan CSS untuk tombol Galeri (Warna Merah) */
+/* 1. CSS untuk tombol Galeri (Warna Merah) */
 .button-gallery-toggle {
-    background-color: #E72545; /* Contoh warna merah dari screenshot Anda */
-    /* Tambahkan properti dasar yang lain jika diperlukan */
+    background-color: #E72545; /* Pastikan ini warna merah yang Anda lihat */
     color: white;
-    /* ... pastikan properti layout (display: flex, align-items: center) juga ada ... */
-}
-
-/* 2. Style untuk Wadah Galeri (Memperbaiki Kerapian Lebar) */
-#galeri-instagram-tersembunyi {
-    /* Atur lebar maksimum agar sama dengan tombol utama Anda */
+    text-decoration: none;
+    font-weight: bold;
+    
+    /* PENTING UNTUK LOGO AGAR TIDAK HILANG */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* Untuk centering horizontal */
+    
+    /* Pewarisan properti button dasar */
     width: 90%; 
-    max-width: 350px; /* Nilai ini HARUS sama dengan max-width tombol */
-    margin: 20px auto; /* Membuat rata tengah */
-    text-align: center;
+    max-width: 350px; 
+    margin: 8px auto; 
+    padding: 12px 20px;
+    border-radius: 8px;
 }
 
-/* 3. Pastikan gambar di dalamnya mengisi lebar penuh wadah */
-.gambar-galeri-embed {
+/* Pastikan logo di dalamnya memiliki margin yang cukup */
+.button-gallery-toggle .icon {
+    margin-right: 8px;
+}
+
+/* 2. Styling untuk Gambar Galeri (Memperbaiki Kerapian) */
+#galeri-instagram-tersembunyi {
+    /* Samakan lebar dengan tombol */
+    width: 90%; 
+    max-width: 350px; 
+    margin: 20px auto; /* Membuat rata tengah */
+}
+/* Pastikan gambar mengisi penuh wadah */
+.gambar-galeri-embed { /* Jika Anda menggunakan class ini */
     width: 100%; 
     height: auto;
     display: block;
-}
-
-/* WAJIB: Aturan penyembunyian awal */
-.tersembunyi {
-    display: none;
 }
