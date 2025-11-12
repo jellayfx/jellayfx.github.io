@@ -55,3 +55,23 @@ document.getElementById('tampilkan-instagram-btn').addEventListener('click', fun
         buttonText.textContent = 'Lihat Galeri Instagram'; // Ubah teks kembali
     }
 });
+
+/* Asumsi semua tombol memiliki max-width ini */
+.button {
+    max-width: 350px; /* Gunakan lebar maksimum tombol Anda yang sebenarnya */
+    /* ... */
+}
+
+/* Terapkan lebar yang sama pada wadah galeri dan pastikan rata tengah */
+#galeri-instagram-tersembunyi {
+    width: 90%; /* Mengikuti lebar layar */
+    max-width: 350px; /* Sama dengan max-width tombol agar sejajar */
+    margin: 20px auto; /* Penting untuk meratakan ke tengah */
+    text-align: center; /* Meratakan konten di dalamnya (catatan embed) */
+}
+
+/* Pastikan iframe mengisi seluruh lebar wadahnya */
+#galeri-instagram-tersembunyi iframe {
+    width: 100%;
+    /* Atur height sesuai kebutuhan Anda (misalnya 400px seperti yang sudah ada) */
+}
