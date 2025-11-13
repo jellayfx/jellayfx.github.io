@@ -5,9 +5,9 @@ document.getElementById('tampilkan-qris-gopay-btn').addEventListener('click', fu
     
     if (galeriWadah.classList.contains('tersembunyi')) {
         galeriWadah.classList.remove('tersembunyi');
-        buttonText.textContent = '>Thank You! ☕';
+        buttonText.textContent = 'Thank You! ☕';
     } else {
         galeriWadah.classList.add('tersembunyi');
-        buttonText.textContent = '>Buy Me A Coffee With GOPAY/QRIS';
+        buttonText.textContent = 'Buy Me A Coffee With GOPAY/QRIS';
     }
 });
