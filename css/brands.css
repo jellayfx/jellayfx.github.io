@@ -685,8 +685,8 @@
     margin-right: 8px;
 }
 
-/* D. Style untuk Wadah Galeri (#galeri-instagram-tersembunyi) */
-#galeri-instagram-tersembunyi {
+/* D. Style untuk Wadah Galeri (#galeri-qris-gopay-tersembunyi) */
+#galeri-qris-gopay-tersembunyi {
     /* Memastikan wadah selebar tombol */
     width: 90%; 
     max-width: 350px; 
@@ -697,7 +697,7 @@
 }
 
 /* E. Style untuk Gambar Galeri (Wajib agar tidak terlalu besar) */
-#galeri-instagram-tersembunyi .gambar-galeri-embed {
+#galeri-qris-gopay-tersembunyi .gambar-galeri-embed {
     width: 100% !important;        /* Memaksa lebar penuh wadah */
     max-width: 100% !important;    /* Memaksa batasan lebar */
     height: auto !important;       /* Mempertahankan rasio gambar */
