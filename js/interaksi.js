@@ -5,9 +5,9 @@ document.getElementById('tampilkan-qris-gopay-btn').addEventListener('click', fu
     
     if (galeriWadah.classList.contains('tersembunyi')) {
         galeriWadah.classList.remove('tersembunyi');
-        buttonText.textContent = 'Sembunyikan Qris Gopay';
+        buttonText.textContent = '>Thank You! ☕';
     } else {
         galeriWadah.classList.add('tersembunyi');
-        buttonText.textContent = 'Lihat Qris Gopay';
+        buttonText.textContent = '>Buy Me A Coffee With GOPAY/QRIS';
     }
 });
