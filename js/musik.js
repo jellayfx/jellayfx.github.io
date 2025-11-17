@@ -1,22 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('latarBelakangMusik');
-    
-    if (audio) {
-        console.log('Mencoba memutar audio tanpa interaksi pengguna...');
+    const tombol = document.getElementById('tombolKontrol');
+
+    if (audio && tombol) {
         
-        // **Fungsi .play() yang Mencoba Autoplay Bersuara**
-        audio.play()
-            .then(() => {
-                // Berhasil diputar (Ini hanya terjadi jika browser mengizinkannya)
-                console.log('✅ Berhasil: Musik otomatis mulai diputar tanpa senyap.');
-            })
-            .catch(error => {
-                // Gagal diputar (Ini adalah hasil yang paling mungkin terjadi)
-                console.error('❌ GAGAL: Browser memblokir pemutaran otomatis bersuara (Autoplay Policy).');
-                console.error('Penyebab Gagal:', error.name);
-                
-                // Biasanya, Anda harus menambahkan instruksi kepada pengguna di sini
-                // Contoh: audio.controls = true; atau tampilkan pesan "Klik untuk Putar"
-            });
+        tombol.addEventListener('click', function() {
+            
+            // Cek apakah audio sedang dalam keadaan paused (jeda)
+            // Properti 'paused' akan bernilai true jika audio belum dimainkan atau sedang dijeda
+            if (audio.paused) {
+                // Mencoba memutar audio
+                audio.play()
+                    .then(() => {
+                        // Berhasil dimainkan
+                        tombol.textContent = '⏸️ Jeda Musik';
+                        console.log('Musik mulai diputar.');
+                    })
+                    .catch(error => {
+                        // Gagal (jarang terjadi setelah interaksi pengguna, tapi mungkin karena masalah file)
+                        console.error('Gagal memutar audio:', error);
+                    });
+            } else {
+                // Audio sedang dimainkan, jadi jeda
+                audio.pause();
+                tombol.textContent = '▶️ Lanjutkan Musik';
+                console.log('Musik dijeda.');
+            }
+        });
+        
+    } else {
+        console.error('ERROR: Elemen audio atau tombol kontrol tidak ditemukan.');
     }
 });
