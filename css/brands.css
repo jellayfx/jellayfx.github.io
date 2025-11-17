@@ -649,6 +649,20 @@
 	  font-size: 16px; /* Menambahkan ukuran font */
 }
 
+/* Exness */
+.button-exness {
+    --button-text: #ffff00;
+    --button-background: #000000;
+    --button-border: 1px solid #FFFFFF;
+}
+
+/* FBS Partner */
+.button-fbs-partner {
+    --button-text: #009b00;
+    --button-background: #000000;
+    --button-border: 1px solid #FFFFFF;
+}
+
 
 /* ======================================================= */
 /* ATURAN FUNGSI GALERI & TOMBOL KHUSUS GALERI */
