@@ -1,36 +1,22 @@
-// Function untuk memutar musik
-function putarMusik() {
-    // Mendapatkan elemen audio dari ID "latarBelakangMusik"
+document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('latarBelakangMusik');
     
-    // Cek apakah elemen audio ditemukan
     if (audio) {
-        // Mencoba memutar audio
+        console.log('Mencoba memutar audio tanpa interaksi pengguna...');
+        
+        // **Fungsi .play() yang Mencoba Autoplay Bersuara**
         audio.play()
             .then(() => {
-                // Berhasil diputar (meskipun browser modern sering memblokir autoplay)
-                console.log('Musik otomatis mulai diputar.');
+                // Berhasil diputar (Ini hanya terjadi jika browser mengizinkannya)
+                console.log('✅ Berhasil: Musik otomatis mulai diputar tanpa senyap.');
             })
             .catch(error => {
-                // Gagal diputar (biasanya karena browser memblokir autoplay tanpa interaksi pengguna)
-                console.error('Gagal memutar musik otomatis:', error);
+                // Gagal diputar (Ini adalah hasil yang paling mungkin terjadi)
+                console.error('❌ GAGAL: Browser memblokir pemutaran otomatis bersuara (Autoplay Policy).');
+                console.error('Penyebab Gagal:', error.name);
                 
-                // Berikan instruksi kepada pengguna untuk mengklik sesuatu
-                // Anda bisa menambahkan pesan di UI/tampilan jika ini terjadi
-                console.log('Browser memblokir autoplay. Coba tambahkan tombol/interaksi pengguna untuk memicu pemutaran.');
+                // Biasanya, Anda harus menambahkan instruksi kepada pengguna di sini
+                // Contoh: audio.controls = true; atau tampilkan pesan "Klik untuk Putar"
             });
-    } else {
-        console.error('Elemen audio dengan ID "latarBelakangMusik" tidak ditemukan.');
     }
-}
-
-// Memanggil fungsi putarMusik setelah seluruh konten halaman dimuat
-// Jika Anda ingin memutar segera, Anda bisa panggil langsung, tetapi ini lebih aman.
-document.addEventListener('DOMContentLoaded', putarMusik);
-
-// Catatan Penting:
-// Banyak browser modern (Chrome, Safari, Firefox) memblokir pemutaran otomatis
-// audio/video (autoplay) jika tidak ada *interaksi pengguna* (klik/sentuh) sebelumnya.
-// Solusi terbaik adalah membuat tombol "Mainkan Musik" yang diklik pengguna,
-// atau hanya mengizinkan autoplay jika file audio disetel ke `muted`.
-// Namun, kode di atas adalah cara standar untuk mencoba autoplay.
+});
