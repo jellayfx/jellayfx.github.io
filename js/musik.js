@@ -1,34 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('latarBelakangMusik');
-    const tombol = document.getElementById('tombolKontrol');
+    const tombol = document.getElementById('tombolMusik');
+    const teksKontrol = document.getElementById('teksKontrol');
+    
+    // Status awal (kita anggap belum dimainkan)
+    let isPlaying = false; 
 
-    if (audio && tombol) {
+    if (audio && tombol && teksKontrol) {
         
-        tombol.addEventListener('click', function() {
+        tombol.addEventListener('click', function(event) {
+            // Mencegah tindakan default tautan (navigasi)
+            event.preventDefault(); 
             
-            // Cek apakah audio sedang dalam keadaan paused (jeda)
-            // Properti 'paused' akan bernilai true jika audio belum dimainkan atau sedang dijeda
-            if (audio.paused) {
-                // Mencoba memutar audio
+            // Logika Toggle Play/Pause
+            if (isPlaying) {
+                // Saat ini sedang diputar, jadi kita akan menjeda
+                audio.pause();
+                isPlaying = false;
+                teksKontrol.textContent = '▶️ Play Musik';
+                console.log('Musik dijeda.');
+                
+            } else {
+                // Saat ini sedang dijeda, jadi kita akan memutar
                 audio.play()
                     .then(() => {
-                        // Berhasil dimainkan
-                        tombol.textContent = '⏸️ Jeda Musik';
+                        isPlaying = true;
+                        teksKontrol.textContent = '⏸️ Pause Musik';
                         console.log('Musik mulai diputar.');
                     })
                     .catch(error => {
-                        // Gagal (jarang terjadi setelah interaksi pengguna, tapi mungkin karena masalah file)
+                        // Ini akan menangani masalah jika Autoplay diblokir
                         console.error('Gagal memutar audio:', error);
+                        alert("Gagal memutar musik. Pastikan Anda sudah berinteraksi dengan halaman.");
+                        isPlaying = false;
+                        teksKontrol.textContent = '▶️ Play Musik (Gagal)';
                     });
-            } else {
-                // Audio sedang dimainkan, jadi jeda
-                audio.pause();
-                tombol.textContent = '▶️ Lanjutkan Musik';
-                console.log('Musik dijeda.');
             }
         });
         
     } else {
-        console.error('ERROR: Elemen audio atau tombol kontrol tidak ditemukan.');
+        console.error('ERROR: Pastikan semua ID (latarBelakangMusik, tombolMusik, teksKontrol) sudah benar di HTML.');
     }
 });
