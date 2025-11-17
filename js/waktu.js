@@ -19,7 +19,7 @@ var element = document.querySelector("body"); var watermark = document.createEle
 
 // Setel teks watermark dan propertinya
 watermark.textContent = day + ", " + dateNum + " " + month + " " + year;
-watermark.style = "color:white;opacity:.5;font-size:10px;position:fixed;bottom:25px;left:25px;z-index:150";
+watermark.style = "color:black;opacity:.5;font-size:10px;position:fixed;bottom:25px;left:25px;z-index:150";
 element.appendChild(watermark);
 
 //////////////////////////////////////////////////
