@@ -665,7 +665,7 @@
 
 /* Musik */
 .button-musikk {
-    --button-text: #0000FF;
+    --button-text: #FFFFFF;
     --button-background: #000000;
     --button-border: 1px solid #FFFFFF;
 }
