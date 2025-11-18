@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.play()
             .then(() => {
                 isPlaying = true;
-                teksKontrol.textContent = '⏸️ Pause Musik (Acak)';
+                teksKontrol.textContent = '⏸️ Pause Musik';
                 console.log('Memutar lagu acak:', laguAcakURL);
             })
             .catch(error => {
                 console.error('Gagal memutar lagu acak. Autoplay mungkin diblokir:', error);
                 alert("Musik diblokir. Silakan klik lagi atau izinkan pemutaran otomatis.");
                 isPlaying = false;
-                teksKontrol.textContent = '▶️ Play Musik (Blokir)';
+                teksKontrol.textContent = '▶️ Play Musik (Coba Reload)';
             });
     }
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Jika sedang diputar: Jeda (Pause)
                 audio.pause();
                 isPlaying = false;
-                teksKontrol.textContent = '▶️ Play Musik Acak';
+                teksKontrol.textContent = '▶️ Play Musik';
                 console.log('Musik dijeda.');
                 
             } else {
