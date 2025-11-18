@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pemutar Musik Acak</title>
+    <style>
+        /* [Gaya CSS sama seperti sebelumnya...] */
+        .button-musik {
+            display: inline-flex; 
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #008CBA; 
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-musik:hover {
+            background-color: #007bb5;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="latarBelakangMusik" loop></audio> 
+
+    <a class="button button-musik" 
+       href="javascript:void(0);" 
+       role="button"
+       id="tombolMusik">
+        <img class="icon" aria-hidden="true" src="https://jellayfx.github.io/images/icons/apple.svg" alt="Musik">
+        <span id="teksKontrol">🎵 Play Musik Acak</span>
+    </a>
+
+    <script src="https://jellayfx.github.io/musik_acak.js"></script>
+
+</body>
+</html>
