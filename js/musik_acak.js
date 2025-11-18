@@ -5,10 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 1. DAFTAR LAGU: Definisikan semua jalur (path) file musik Anda di sini
     const daftarLagu = [
-        'https://ciindysrg.github.io/assets/audio/17mashup.mp3', // Ganti dengan jalur file musik Anda
-        'https://ciindysrg.github.io/assets/audio/akudulu.mp3',
-        'https://ciindysrg.github.io/audio/sygbanget.mp3',
-        'https://ciindysrg.github.io/audio/jagaselaluhatimu.mp3',
+        'https://jellayfx.github.io/mp3/Mulak%20Dakdanak%20(Official%20Music%20Video)%20Osen%20Hutasoit%20-%20Osen%20Hutasoit.mp3', // Ganti dengan jalur file musik Anda
+        'https://jellayfx.github.io/mp3/Ko%20Bikin%20Sa%20Nih%20Salting%20%20SALTING%20Ko%20Paling%20Manis%20(%20Lirik%20)%20-%20MJI%20OFICIAL.mp3',
+        'https://jellayfx.github.io/mp3/Joji%20-%20%20Glimpse%20of%20Us%20-%2088rising.mp3',
+        'https://jellayfx.github.io/mp3/New%20West%20-%20Those%20Eyes%20(slowed%20%2B%20reverb)%20-%20heyyyla.mp3',
+        'https://jellayfx.github.io/mp3/OST%20%20-%20Stay%20With%20Me%20.mp3',
+        'https://jellayfx.github.io/mp3/Radiohead%20-%20Creep%20-%20Radiohead.mp3',
+        'https://jellayfx.github.io/mp3/Sa%20Stop%20Mabok_(Lampu1Comedy)_Lirik%20sa%20janji%20trakan%20Mabok%20Mabok%20lagi%20-%20Ringkas99.mp3',
+        'https://jellayfx.github.io/mp3/Silent%C3%B3%20-%20Watch%20Me%20(WhipNae%20Nae)%20(Official).mp3',
+        'https://jellayfx.github.io/mp3/TUTU%20-%20Alma%20Zarza%20(Official%20Lyrical%20Video)%20-%20Alma%20Zarza.mp3',
+        'https://jellayfx.github.io/mp3/Dj%20salting%20%20dj%20salting%20remix%20slowed%20reverb%20%20tiktok%20-%20DJ%20Rainbow.mp3',
         'https://jellayfx.github.io/mp3/Angels%20Like%20You%20-%20Miley%20Cyrus%20%20Slowed%20%20Reverb%20TikTok%20Version.mp3'
     ];
     
